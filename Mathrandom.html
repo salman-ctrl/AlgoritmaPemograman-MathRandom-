@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="text" name="masukkan" id="ipt" placeholder="masukkan nama..">
+    <button class="btn" onclick="change()">change</button>
+    <h2 id="nama"></h2>
+    <h2 id="namaBuah"></h2>
+
+    <script>
+    function change(){
+
+        const input = document.getElementById('ipt').value;
+        const buah = ['jambu','pisang','nanas','nangka','semangka'];
+
+        const index = Math.floor(Math.random()*buah.length);
+
+        const hasil = buah[index];
+
+        document.getElementById('nama').innerText = input;
+
+        document.getElementById('namaBuah').innerText = `Buah kesukaan: ${hasil}`;
+
+        document.getElementById('ipt').value='';
+       
+    }
+    </script>
+</body>
+
+</html>
+
